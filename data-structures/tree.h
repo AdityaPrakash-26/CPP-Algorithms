@@ -20,9 +20,10 @@ void Node<T>::CreateTree(Node *curr, Node *n, T x, char pos) {      //curr is a 
             CreateTree(n, n->left, x, ch);
         else if (ch == 'r')
             CreateTree(n, n->right, x, ch);
-        else 
+        else {
             cout << "Please enter a valid choice\n";
             CreateTree(n, n, x, ch);
+        }
     } else {
         Node *t = new Node;
         t->left = NULL;
