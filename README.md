@@ -8,6 +8,8 @@ I recommend using Visual Studio Code
 1. Install [VSCode](https://code.visualstudio.com/download)
 2. Clone the repository into your project folder, and import it with `#include "CPP-Algorithms"`
 
+All functions are provided as a template, so that you are not limited by the data type. If contributing, please follow the same pattern.
+
 ## Contributing
 
 All contributions are welcome :)
