@@ -1,4 +1,3 @@
-#include <list>
 using namespace std;
 
 template <typename T>
@@ -39,7 +38,6 @@ void Node<T>::CreateTree(Node *curr, Node *n, T x, char pos) {      //curr is a 
         }
     }
 }
-<<<<<<< HEAD
 
 //TRAVERSALS
 template <typename T>
@@ -55,7 +53,7 @@ template <typename T>
 void Node<T>::In(Node *n) {
     if (n != NULL) {
         In(n->left);
-        cout << n->val << "  ";
+        cout << n->val << "  ";     
         In(n->right);
     }
 }
@@ -68,5 +66,3 @@ void Node<T>::Post(Node *n) {
         cout << n->val << "  ";
     }
 }
-=======
->>>>>>> d5b714fb56d69c15dc4a6ff6503ce0ae0de6675b
