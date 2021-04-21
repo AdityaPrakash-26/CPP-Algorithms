@@ -23,9 +23,10 @@ void Node<T>::CreateTree(Node *curr, Node *n, T x, char pos) {      //curr is a 
             CreateTree(n, n->left, x, ch);
         else if (ch == 'r')
             CreateTree(n, n->right, x, ch);
-        else 
+        else {
             cout << "Please enter a valid choice\n";
             CreateTree(n, n, x, ch);
+        }
     } else {
         Node *t = new Node;
         t->left = NULL;
@@ -38,6 +39,7 @@ void Node<T>::CreateTree(Node *curr, Node *n, T x, char pos) {      //curr is a 
         }
     }
 }
+<<<<<<< HEAD
 
 //TRAVERSALS
 template <typename T>
@@ -66,3 +68,5 @@ void Node<T>::Post(Node *n) {
         cout << n->val << "  ";
     }
 }
+=======
+>>>>>>> d5b714fb56d69c15dc4a6ff6503ce0ae0de6675b
