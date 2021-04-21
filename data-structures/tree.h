@@ -8,6 +8,9 @@ struct Node {
     Node *right;
 
     void CreateTree(Node *curr, Node *n, T x, char pos);
+    void Pre(Node *n);
+    void In(Node *n);
+    void Post(Node *n);
 };
 
 template <typename T>
@@ -33,5 +36,33 @@ void Node<T>::CreateTree(Node *curr, Node *n, T x, char pos) {      //curr is a 
         } else if (pos == 'r') {
             curr->right = t;
         }
+    }
+}
+
+//TRAVERSALS
+template <typename T>
+void Node<T>::Pre(Node *n) {
+    if (n != NULL) {
+        cout << n->val << "  ";
+        Pre(n->left);
+        Pre(n->right);
+    }
+}
+
+template <typename T>
+void Node<T>::In(Node *n) {
+    if (n != NULL) {
+        In(n->left);
+        cout << n->val << "  ";
+        In(n->right);
+    }
+}
+
+template <typename T>
+void Node<T>::Post(Node *n) {
+    if (n != NULL) {
+        Post(n->left);
+        Post(n->right);
+        cout << n->val << "  ";
     }
 }
